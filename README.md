@@ -5,7 +5,6 @@
 ## Table of Contents
 
 - [Features](#features)
-- [Getting Started](#getting-started)
 - [Dark/Light Theme Support](#darklight-theme-support)
 - [Zoom Functionality](#zoom-functionality)
 - [Installation](#installation)
