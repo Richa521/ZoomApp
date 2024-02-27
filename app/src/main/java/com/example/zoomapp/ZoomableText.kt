@@ -84,7 +84,7 @@ fun ZoomableText(onSettingsClick: () -> Unit) {
                         color = MaterialTheme.colors.primary
                     )
                 ) {
-                    append("Your static text goes here")
+                    append("Hello World, Welcome to my zoom app.")
                 }
             }
 
