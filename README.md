@@ -44,7 +44,7 @@ As the app is not available on the Google Play Store, you can download and insta
 
 ### 1. Download the APK:
 
-- Click on the [APK link](https://drive.google.com/file/d/1vxhLfk8copGquT2tpW8ZHgpBeGyTLlce/view?usp=sharing) to access the APK file on Google Drive.
+- Click on the [APK link](https://drive.google.com/file/d/1bTqZwz3R6ZE--vrNsDD1KqMM2xeq_Yu3/view?usp=sharing) to access the APK file on Google Drive.
 - Download the APK file to your device, whether it's your phone or your computer.
   
 ### 2. Install on Android Studio:
