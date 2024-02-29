@@ -10,20 +10,19 @@ import androidx.navigation.NavController
 import com.example.zoomapp.ui.theme.ZoomAppTheme
 
 @Composable
-fun ZoomableTextScreen(navController: NavController) {
+fun ZoomableTextScreen() {
     var isSettingsVisible by remember { mutableStateOf(false) }
 
     ZoomAppTheme {
         Column {
             ZoomableText {
                 isSettingsVisible = true
-                navController.navigate("settings")
             }
 
             if (isSettingsVisible) {
-                SettingsScreen(onBackClick = {
-                    navController.popBackStack()
-                })
+                SettingsScreenDialog {
+                    isSettingsVisible = false
+                }
             }
         }
     }

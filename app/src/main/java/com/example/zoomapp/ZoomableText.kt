@@ -16,6 +16,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -32,7 +33,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ZoomableText(onSettingsClick: () -> Unit) {
-    var scale by remember { mutableStateOf(1f) }
+    var scale by remember { mutableFloatStateOf(1f) }
     var offset by remember { mutableStateOf(Offset(0f, 0f)) }
     var textSize by remember { mutableStateOf(25.sp) }
 
@@ -56,7 +57,7 @@ fun ZoomableText(onSettingsClick: () -> Unit) {
         TopAppBar(
             title = {
                 Text(
-                    text = "ZoomApp",
+                    text = "Zoom App",
                     modifier = Modifier.padding(start = 16.dp),
                     fontWeight = FontWeight.Bold
                 )
