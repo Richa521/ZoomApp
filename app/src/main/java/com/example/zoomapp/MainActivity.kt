@@ -1,5 +1,6 @@
 package com.example.zoomapp
 
+import android.app.ActivityManager
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,12 +20,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-
             val navController = rememberNavController()
-            val isSystemDarkMode = isSystemInDarkTheme()
 
-            ThemeState.initialize(isSystemDarkMode)
-
+            ThemeState.initialize(this)
             var splashScreenFinished by remember { mutableStateOf(false) }
 
             SplashScreen {

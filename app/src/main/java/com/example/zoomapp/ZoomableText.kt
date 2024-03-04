@@ -3,10 +3,11 @@ package com.example.zoomapp
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.BasicText
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
@@ -53,6 +54,7 @@ fun ZoomableText(onSettingsClick: () -> Unit) {
                     textSize = (15 * scale).sp
                 }
             }
+            .verticalScroll(rememberScrollState())
     ) {
         TopAppBar(
             title = {
@@ -100,5 +102,3 @@ fun ZoomableText(onSettingsClick: () -> Unit) {
 }
 
 val AppBarHeight = 56.dp
-
-

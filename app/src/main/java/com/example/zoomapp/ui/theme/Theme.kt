@@ -5,6 +5,9 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import com.example.zoomapp.ThemeState
 
 private val DarkColorPalette = darkColors(
@@ -25,16 +28,20 @@ fun ZoomAppTheme(content: @Composable () -> Unit) {
     val isSystemDarkMode = isSystemInDarkTheme()
 
     if (!ThemeState.isInitialized) {
-        ThemeState.initialize(isSystemDarkMode)
+        ThemeState.initialize(LocalContext.current)
     }
+
+
 
     val colors = if (ThemeState.isDarkMode) {
         DarkColorPalette
     } else {
-        LightColorPalette
+        if (ThemeState.isSystemMode && isSystemDarkMode) {
+            DarkColorPalette
+        } else {
+            LightColorPalette
+        }
     }
-
-
 
     MaterialTheme(
         colors = colors,
